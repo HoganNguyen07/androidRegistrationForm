@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/labelFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editFirstName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter First Name"
+        app:layout_constraintStart_toEndOf="@+id/labelFirstName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/labelLastName" />
+
+    <TextView
+        android:id="@+id/labelLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFirstName" />
+
+    <EditText
+        android:id="@+id/editLastName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Last Name"
+        app:layout_constraintStart_toEndOf="@+id/labelLastName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFirstName"
+        app:layout_constraintBottom_toTopOf="@+id/labelGender" />
+
+    <TextView
+        android:id="@+id/labelGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editLastName" />
+
+    <RadioGroup
+        android:id="@+id/radioGender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/labelGender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editLastName"
+        app:layout_constraintBottom_toTopOf="@+id/labelBirthDate"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/labelBirthDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Birthdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGender" />
+
+    <EditText
+        android:id="@+id/editBirthDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Birthdate"
+        app:layout_constraintStart_toEndOf="@+id/labelBirthDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGender"
+        app:layout_constraintBottom_toTopOf="@+id/labelAddress" />
+
+    <TextView
+        android:id="@+id/labelAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editBirthDate" />
+
+    <EditText
+        android:id="@+id/editAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Address"
+        app:layout_constraintStart_toEndOf="@+id/labelAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editBirthDate"
+        app:layout_constraintBottom_toTopOf="@+id/labelEmail" />
+
+    <TextView
+        android:id="@+id/labelEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editAddress" />
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Email"
+        app:layout_constraintStart_toEndOf="@+id/labelEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editAddress"
+        app:layout_constraintBottom_toTopOf="@+id/checkAgreeToTerms" />
+    <CheckBox
+        android:id="@+id/checkAgreeToTerms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I agree to the terms and conditions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkAgreeToTerms"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="registerButtonClicked" />
+</androidx.constraintlayout.widget.ConstraintLayout>

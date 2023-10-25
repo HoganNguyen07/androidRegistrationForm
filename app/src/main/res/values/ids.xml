@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="editFirstName" type="id" />
+    <item name="labelFirstName" type="id" />
+    <item name="labelLastName" type="id" />
+    <item name="editLastName" type="id" />
+    <item name="labelGender" type="id" />
+    <item name="radioGender" type="id" />
+    <item name="labelBirthDate" type="id" />
+    <item name="radioMale" type="id" />
+    <item name="radioFemale" type="id" />
+    <item name="editBirthDate" type="id" />
+    <item name="labelAddress" type="id" />
+    <item name="editAddress" type="id" />
+    <item name="labelEmail" type="id" />
+</resources>
